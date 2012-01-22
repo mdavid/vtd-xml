@@ -3,4 +3,7 @@ obj
 *.userprefs
 .DS_Store
 *.suo
+*.pidb
+*.mdb
+*.pdb
 

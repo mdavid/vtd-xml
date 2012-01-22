@@ -7,14 +7,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{133E9364-1136-4B10-9642-029302B592E8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ximpleware.Test.Performance</RootNamespace>
-    <AssemblyName>Ximpleware.Test.Performance</AssemblyName>
+    <RootNamespace>Ximpleware.VTDXml.Test.Performance</RootNamespace>
+    <AssemblyName>Ximpleware.VTDXml.Test.Performance</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
+    <OutputPath>..\..\..\bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -23,7 +23,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Release</OutputPath>
+    <OutputPath>..\..\..\bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
@@ -31,8 +31,12 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="nunit.framework">
-      <Package>/Users/mdavid/Projects/amp.fm_private/src/Nuxleus/lib/nunit.framework.dll</Package>
+      <Package>..\..\..\lib\nunit.framework.dll</Package>
     </Reference>
+<ProjectReference Include="..\..\Ximpleware.VTDXml\Ximpleware.VTDXml.csproj">
+      <Project>{CD97EC50-A767-4F12-9AC6-E63F0AB82851}</Project>
+      <Name>Ximpleware.VTDXml</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,10 +91,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup>
+  <!--<ItemGroup>
     <ProjectReference Include="..\..\Ximpleware\Ximpleware.csproj">
       <Project>{CD97EC50-A767-4F12-9AC6-E63F0AB82851}</Project>
       <Name>Ximpleware</Name>
     </ProjectReference>
-  </ItemGroup>
+  </ItemGroup>-->
 </Project>

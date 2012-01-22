@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ximpleware", "src\Ximpleware\Ximpleware.csproj", "{CD97EC50-A767-4F12-9AC6-E63F0AB82851}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ximpleware.VTDXml", "src\Ximpleware.VTDXml\Ximpleware.VTDXml.csproj", "{CD97EC50-A767-4F12-9AC6-E63F0AB82851}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ximpleware.Test.Performance", "src\Ximpleware.Test\Ximpleware.Test.Performance\Ximpleware.Test.Performance.csproj", "{133E9364-1136-4B10-9642-029302B592E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ximpleware.VTDXml.Test.Performance", "src\Ximpleware.VTDXml.Test\Ximpleware.VTDXml.Test.Performance\Ximpleware.VTDXml.Test.Performance.csproj", "{133E9364-1136-4B10-9642-029302B592E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
