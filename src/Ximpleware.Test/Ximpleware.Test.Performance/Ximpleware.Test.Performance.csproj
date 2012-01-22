@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{133E9364-1136-4B10-9642-029302B592E8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ximpleware.Test.Performance</RootNamespace>
+    <AssemblyName>Ximpleware.Test.Performance</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <Package>/Users/mdavid/Projects/amp.fm_private/src/Nuxleus/lib/nunit.framework.dll</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Indexing\IndexLoad.cs" />
+    <Compile Include="Indexing\IndexWrite.cs" />
+    <Compile Include="Overwrite\Overwrite.cs" />
+    <Compile Include="NamespaceCompensation\FragmentTest.cs" />
+    <Compile Include="SeparateIndex\Separate_Index.cs" />
+    <Compile Include="BioInfo\BioInfo_Stats.cs" />
+    <Compile Include="Bookmark\UseBookMark.cs" />
+    <Compile Include="BufferReuse\BufferReuse_SoapProcessor.cs" />
+    <Compile Include="ChangeElementName\ChangeElementName.cs" />
+    <Compile Include="DuplicateNav\DuplicateNav.cs" />
+    <Compile Include="Erase\Erase.cs" />
+    <Compile Include="NodeRecorder\TestNodeRecorder.cs" />
+    <Compile Include="Shuffle\Shuffle.cs" />
+    <Compile Include="SOAP_Processing\SOAPProcessor.cs" />
+    <Compile Include="XMLModifier\Update.cs" />
+    <Compile Include="RSSReader\RSSReader.cs" />
+    <Compile Include="Test.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="XmlTestFiles\bioinfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="XmlTestFiles\cd.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="XmlTestFiles\soap.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="XmlTestFiles\servers.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="XmlTestFiles\newpo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="XmlTestFiles\oldpo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="XmlTestFiles\new.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="XmlTestFiles\old.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="XmlTestFiles\mix.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="XmlTestFiles\po.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Ximpleware\Ximpleware.csproj">
+      <Project>{CD97EC50-A767-4F12-9AC6-E63F0AB82851}</Project>
+      <Name>Ximpleware</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

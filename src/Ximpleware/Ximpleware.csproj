@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD97EC50-A767-4F12-9AC6-E63F0AB82851}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Ximpleware</RootNamespace>
+    <AssemblyName>Ximpleware</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ElementFragmentNs.cs" />
+    <Compile Include="EncodingException.cs" />
+    <Compile Include="EntityException.cs" />
+    <Compile Include="EOFException.cs" />
+    <Compile Include="Expr.cs" />
+    <Compile Include="FastIntBuffer.cs" />
+    <Compile Include="FastLongBuffer.cs" />
+    <Compile Include="FastObjectBuffer.cs" />
+    <Compile Include="FilterExpr.cs" />
+    <Compile Include="FuncExpr.cs" />
+    <Compile Include="IByteBuffer.cs" />
+    <Compile Include="IIntBuffer.cs" />
+    <Compile Include="ILongBuffer.cs" />
+    <Compile Include="IndexHandler.cs" />
+    <Compile Include="IndexReadException.cs" />
+    <Compile Include="IndexWriteException.cs" />
+    <Compile Include="IObjectBuffer.cs" />
+    <Compile Include="IReader.cs" />
+    <Compile Include="LocationPathExpr.cs" />
+    <Compile Include="ModifyException.cs" />
+    <Compile Include="NavException.cs" />
+    <Compile Include="NodeRecorder.cs" />
+    <Compile Include="NodeTest.cs" />
+    <Compile Include="ParseException.cs" />
+    <Compile Include="PathExpr.cs" />
+    <Compile Include="PilotException.cs" />
+    <Compile Include="TextIter.cs" />
+    <Compile Include="UniByteBuffer.cs" />
+    <Compile Include="UnionExpr.cs" />
+    <Compile Include="VTDException.cs" />
+    <Compile Include="VTDGen.cs" />
+    <Compile Include="VTDNav.cs" />
+    <Compile Include="XMLByteStream.cs" />
+    <Compile Include="XMLModifier.cs" />
+    <Compile Include="XPathEvalException.cs" />
+    <Compile Include="XPathParseException.cs" />
+    <Compile Include="AutoPilot.cs" />
+    <Compile Include="BinaryExpr.cs" />
+    <Compile Include="BookMark.cs" />
+    <Compile Include="ByteSegment.cs" />
+    <Compile Include="ContextBuffer.cs" />
+    <Compile Include="Parser\ISO8859_10.cs" />
+    <Compile Include="Parser\ISO8859_11.cs" />
+    <Compile Include="Parser\ISO8859_13.cs" />
+    <Compile Include="Parser\ISO8859_14.cs" />
+    <Compile Include="Parser\ISO8859_15.cs" />
+    <Compile Include="Parser\ISO8859_2.cs" />
+    <Compile Include="Parser\ISO8859_3.cs" />
+    <Compile Include="Parser\ISO8859_4.cs" />
+    <Compile Include="Parser\ISO8859_5.cs" />
+    <Compile Include="Parser\ISO8859_6.cs" />
+    <Compile Include="Parser\ISO8859_7.cs" />
+    <Compile Include="Parser\ISO8859_8.cs" />
+    <Compile Include="Parser\ISO8859_9.cs" />
+    <Compile Include="Parser\WIN1250.cs" />
+    <Compile Include="Parser\WIN1251.cs" />
+    <Compile Include="Parser\WIN1252.cs" />
+    <Compile Include="Parser\WIN1253.cs" />
+    <Compile Include="Parser\WIN1254.cs" />
+    <Compile Include="Parser\WIN1255.cs" />
+    <Compile Include="Parser\WIN1256.cs" />
+    <Compile Include="Parser\WIN1257.cs" />
+    <Compile Include="Parser\WIN1258.cs" />
+    <Compile Include="Parser\XMLChar.cs" />
+    <Compile Include="CS_Cup\action_part.cs" />
+    <Compile Include="CS_Cup\action_production.cs" />
+    <Compile Include="CS_Cup\assoc.cs" />
+    <Compile Include="CS_Cup\CSCup.cs" />
+    <Compile Include="CS_Cup\emit.cs" />
+    <Compile Include="CS_Cup\internal_error.cs" />
+    <Compile Include="CS_Cup\lalr_item.cs" />
+    <Compile Include="CS_Cup\lalr_item_set.cs" />
+    <Compile Include="CS_Cup\lalr_state.cs" />
+    <Compile Include="CS_Cup\lalr_transition.cs" />
+    <Compile Include="CS_Cup\lexer.cs" />
+    <Compile Include="CS_Cup\lr_item_core.cs" />
+    <Compile Include="CS_Cup\non_terminal.cs" />
+    <Compile Include="CS_Cup\nonassoc_action.cs" />
+    <Compile Include="CS_Cup\parse_action.cs" />
+    <Compile Include="CS_Cup\parse_action_row.cs" />
+    <Compile Include="CS_Cup\parse_action_table.cs" />
+    <Compile Include="CS_Cup\parse_reduce_row.cs" />
+    <Compile Include="CS_Cup\parse_reduce_table.cs" />
+    <Compile Include="CS_Cup\parser.cs" />
+    <Compile Include="CS_Cup\production.cs" />
+    <Compile Include="CS_Cup\production_part.cs" />
+    <Compile Include="CS_Cup\reduce_action.cs" />
+    <Compile Include="CS_Cup\shift_action.cs" />
+    <Compile Include="CS_Cup\sym.cs" />
+    <Compile Include="CS_Cup\symbol.cs" />
+    <Compile Include="CS_Cup\symbol_part.cs" />
+    <Compile Include="CS_Cup\symbol_set.cs" />
+    <Compile Include="CS_Cup\terminal.cs" />
+    <Compile Include="CS_Cup\terminal_set.cs" />
+    <Compile Include="CS_Cup\version.cs" />
+    <Compile Include="CS_Cup\Runtime\lr_parser.cs" />
+    <Compile Include="CS_Cup\Runtime\Scanner.cs" />
+    <Compile Include="CS_Cup\Runtime\Symbol.cs" />
+    <Compile Include="CS_Cup\Runtime\virtual_parse_stack.cs" />
+    <Compile Include="ArrayList.cs" />
+    <Compile Include="intHash.cs" />
+    <Compile Include="Transcoder.cs" />
+    <Compile Include="TranscodeException.cs" />
+    <Compile Include="Parser\UTF8Char.cs" />
+    <Compile Include="XPath\Alist.cs" />
+    <Compile Include="XPath\AxisType.cs" />
+    <Compile Include="XPath\FuncName.cs" />
+    <Compile Include="XPath\LiteralExpr.cs" />
+    <Compile Include="XPath\LocationPathNode.cs" />
+    <Compile Include="XPath\NameType.cs" />
+    <Compile Include="XPath\Ntest.cs" />
+    <Compile Include="XPath\NumExpr.cs" />
+    <Compile Include="XPath\Predicate.cs" />
+    <Compile Include="XPath\Step.cs" />
+    <Compile Include="XPath\UnaryExpr.cs" />
+    <Compile Include="XPath\UnsupportedException.cs" />
+    <Compile Include="XPath\VariableExpr.cs" />
+    <Compile Include="XPath\parser.cs" />
+    <Compile Include="XPath\sym.cs" />
+    <Compile Include="XPath\Yylex.cs" />
+    <Compile Include="Transcode\ISO8859_1Coder.cs" />
+    <Compile Include="Transcode\UTF16BE_Coder.cs" />
+    <Compile Include="Transcode\UTF16LE_Coder.cs" />
+    <Compile Include="Transcode\UTF8_Coder.cs" />
+    <Compile Include="Transcode\ASCII_Coder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Parser\" />
+    <Folder Include="CS_Cup\" />
+    <Folder Include="CS_Cup\Runtime\" />
+    <Folder Include="Transcode\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+</Project>
