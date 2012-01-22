@@ -1,5 +1,5 @@
 ﻿/* 
-* Copyright (C) 2002-2010 XimpleWare, info@ximpleware.com
+* Copyright (C) 2002-2011 XimpleWare, info@ximpleware.com
 *
 * This program is free software; you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -35,6 +35,14 @@ namespace com.ximpleware
                 throw new System.IndexOutOfRangeException("XMLDoc size exceeds maximum size");
             Array.Copy(ba, os, XMLDoc, offset, len);
             offset += len;
+        }
+
+        public override void WriteByte(byte value)
+        {
+            if (offset + 1 > XMLDoc.Length)
+                throw new System.IndexOutOfRangeException("XMLDoc size exceeds maximum size");
+            XMLDoc[offset + 1] = value;
+            offset++;
         }
 
         public void Write(byte[] ba)

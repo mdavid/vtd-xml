@@ -35,29 +35,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Indexing\IndexLoad.cs" />
-    <Compile Include="Indexing\IndexWrite.cs" />
-    <Compile Include="Overwrite\Overwrite.cs" />
-    <Compile Include="NamespaceCompensation\FragmentTest.cs" />
-    <Compile Include="SeparateIndex\Separate_Index.cs" />
-    <Compile Include="BioInfo\BioInfo_Stats.cs" />
-    <Compile Include="Bookmark\UseBookMark.cs" />
-    <Compile Include="BufferReuse\BufferReuse_SoapProcessor.cs" />
-    <Compile Include="ChangeElementName\ChangeElementName.cs" />
-    <Compile Include="DuplicateNav\DuplicateNav.cs" />
-    <Compile Include="Erase\Erase.cs" />
-    <Compile Include="NodeRecorder\TestNodeRecorder.cs" />
-    <Compile Include="Shuffle\Shuffle.cs" />
-    <Compile Include="SOAP_Processing\SOAPProcessor.cs" />
-    <Compile Include="XMLModifier\Update.cs" />
-    <Compile Include="RSSReader\RSSReader.cs" />
-    <Compile Include="Test.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\IndexLoadTest.cs" />
+    <Compile Include="Tests\IndexWriteTest.cs" />
+    <Compile Include="Tests\OverwriteTest.cs" />
+    <Compile Include="Tests\FragmentTest.cs" />
+    <Compile Include="Tests\SeparateIndexTest.cs" />
+    <Compile Include="Tests\StatsTest.cs" />
+    <Compile Include="Tests\UseBookMarkTest.cs" />
+    <Compile Include="Tests\BufferReuseTest.cs" />
+    <Compile Include="Tests\ChangeElementNameTest.cs" />
+    <Compile Include="Tests\DuplicateNavTest.cs" />
+    <Compile Include="Tests\EraseTest.cs" />
+    <Compile Include="Tests\NodeRecorderTest.cs" />
+    <Compile Include="Tests\ShuffleTest.cs" />
+    <Compile Include="Tests\SOAPProcessorTest.cs" />
+    <Compile Include="Tests\UpdateTest.cs" />
+    <Compile Include="Tests\RSSReaderTest.cs" />
+    <Compile Include="RunTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
-  </ItemGroup>
   <ItemGroup>
     <None Include="XmlTestFiles\bioinfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
