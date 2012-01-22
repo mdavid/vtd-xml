@@ -3,12 +3,12 @@ using System.Text;
 using com.ximpleware;
 using NUnit.Framework;
 
-namespace Ximpleware.Test
+namespace Ximpleware.VTDXml
 {
-    partial class Performance
+    partial class Test
     {
         [Test]
-        public static void Erase(string[] args)
+        public static void Erase()
         {
             VTDGen vg = new VTDGen();
             AutoPilot ap = new AutoPilot();
@@ -16,9 +16,9 @@ namespace Ximpleware.Test
             //ap.selectXPath("/*/*/*");
             AutoPilot ap2 = new AutoPilot();
             ap2.selectXPath("//@*");
-            if (vg.parseFile("soap2.xml", true))
+            if (vg.parseFile("./XmlTestFiles/soap.xml", true))
             {
-                FileStream fs = new FileStream("output.xml", System.IO.FileMode.OpenOrCreate);
+                FileStream fs = new FileStream("./XmlTestFiles/output.xml", System.IO.FileMode.OpenOrCreate);
                 VTDNav vn = vg.getNav();
                 ap.bind(vn);
                 ap2.bind(vn);

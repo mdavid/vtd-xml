@@ -22,18 +22,18 @@ using System;
 using com.ximpleware;
 using NUnit.Framework;
 
-namespace Ximpleware.Test
+namespace Ximpleware.VTDXml
 {
-    partial class Performance
+    partial class Test
     {
         [Test]
-        public static void RSSReader(string[] args)
+        public static void RSSReader()
         {
             try
             {
                 // open a file and read the content into a byte array
                 VTDGen vg = new VTDGen();
-                if (vg.parseFile("./servers.xml", true))
+                if (vg.parseFile("./XmlTestFiles/servers.xml", true))
                 {
                     VTDNav vn = vg.getNav();
                     AutoPilot ap = new AutoPilot(vn);

@@ -10,16 +10,16 @@ using com.ximpleware;
 // *not* a good idea!
 using NUnit.Framework;
 
-namespace Ximpleware.Test
+namespace Ximpleware.VTDXml
 {
-    partial class Performance
+    partial class Test
     {
         [Test]
-        public static void TestNodeRecorder(string[] args)
+        public static void TestNodeRecorder()
         {
             VTDGen vg = new VTDGen();
             int i;
-            if (vg.parseFile("po.xml", true))
+            if (vg.parseFile("./XmlTestFiles/po.xml", true))
             {
                 // instantiate a node recorder here
                 NodeRecorder nr = new NodeRecorder();

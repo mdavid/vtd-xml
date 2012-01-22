@@ -5,17 +5,17 @@ using NUnit.Framework;
 //This example shows how to load a VTD+XML index
 // into memory then run an XPath against it
 // vg.loadIndex returns an instance of VTDNav
-namespace Ximpleware.Test
+namespace Ximpleware.VTDXml
 {
-    partial class Performance
+    partial class Test
     {
         [Test]
-        public static void IndexLoad(string[] args)
+        public static void IndexLoad()
         {
             try
             {
                 VTDGen vg = new VTDGen();
-                VTDNav vn = vg.loadIndex("po.vxl");
+                VTDNav vn = vg.loadIndex("./XmlTestFiles/po.vxl");
                 AutoPilot ap = new AutoPilot(vn);
                 ap.selectXPath("//items");
                 int i;

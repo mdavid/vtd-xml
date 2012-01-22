@@ -24,21 +24,21 @@ using NUnit.Framework;
  * a particular name space. We also are going 
  * to use VTDGen's parseFile to simplify programming.
  */
-namespace Ximpleware.Test
+namespace Ximpleware.VTDXml
 {
-		partial class Performance
+		partial class Test
 		{
 				[Test]
-				static void Update()
+				public static void Update()
 				{
 						try
 						{
 								// open a file and read the content into a byte array
 								VTDGen vg = new VTDGen();
-								if (vg.parseFile("./oldpo.xml", true))
+								if (vg.parseFile("./XmlTestFiles/oldpo.xml", true))
 								{
 										VTDNav vn = vg.getNav();
-										System.IO.FileInfo f1 = new System.IO.FileInfo("./newpo.txt");
+										System.IO.FileInfo f1 = new System.IO.FileInfo("./XmlTestFiles/newpo.txt");
 										System.IO.FileStream fos = new System.IO.FileStream(f1.FullName, System.IO.FileMode.Create);
 
 										AutoPilot ap = new AutoPilot(vn);

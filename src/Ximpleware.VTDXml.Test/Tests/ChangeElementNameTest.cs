@@ -3,12 +3,12 @@ using System.Text;
 using com.ximpleware;
 using NUnit.Framework;
 
-namespace Ximpleware.Test
+namespace Ximpleware.VTDXml
 {
-    partial class Performance
+    partial class Test
     {
         [Test]
-        public static void ChangeElementName(String[] args)
+        public static void ChangeElementName()
         {
 
             String xml = "<aaaa> <bbbbb> <ccccc> </ccccc> <ccccc/> <ccccc></ccccc> </bbbbb> </aaaa>";
@@ -24,7 +24,7 @@ namespace Ximpleware.Test
             {
                 xm.updateElementName("d:/lalalala");
             }
-            xm.output("lala.xml");
+            xm.output("./XmlTestFiles/lala.xml");
         }
     }
 }

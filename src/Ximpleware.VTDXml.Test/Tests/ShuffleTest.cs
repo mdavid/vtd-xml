@@ -4,12 +4,12 @@ using System.Text;
 using com.ximpleware;
 using NUnit.Framework;
 
-namespace Ximpleware.Test
+namespace Ximpleware.VTDXml
 {
-    partial class Performance
+    partial class Test
     {
         [Test]
-        public static void Shuffle(String[] args)
+        public static void Shuffle()
         {
             VTDGen vg = new VTDGen();
             AutoPilot ap0 = new AutoPilot();
@@ -19,13 +19,13 @@ namespace Ximpleware.Test
             ap1.selectXPath("/root/b");
             ap2.selectXPath("/root/c");
             Encoding eg = System.Text.Encoding.GetEncoding("utf-8");
-            if (vg.parseFile("old.xml", false))
+            if (vg.parseFile("./XmlTestFiles/old.xml", false))
             {
                 VTDNav vn = vg.getNav();
                 ap0.bind(vn);
                 ap1.bind(vn);
                 ap2.bind(vn);
-                FileStream fos = new FileStream("new.xml", System.IO.FileMode.OpenOrCreate);
+                FileStream fos = new FileStream("./XmlTestFiles/new.xml", System.IO.FileMode.OpenOrCreate);
                 //fos.Write("<root>".getBytes());
                 byte[] ba0, ba1, ba2, ba3, ba4;
                 //ba0 = eg.GetBytes("

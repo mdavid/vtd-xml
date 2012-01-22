@@ -7,14 +7,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{133E9364-1136-4B10-9642-029302B592E8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ximpleware.VTDXml.Test.Performance</RootNamespace>
-    <AssemblyName>Ximpleware.VTDXml.Test.Performance</AssemblyName>
+    <RootNamespace>Ximpleware.VTDXml.Test</RootNamespace>
+    <AssemblyName>Ximpleware.VTDXml.Test</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\bin\Debug</OutputPath>
+    <OutputPath>..\..\bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -23,17 +23,20 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\bin\Release</OutputPath>
+    <OutputPath>..\bin\Release\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="pnunit.framework, Version=1.0.4399.30232, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\pnunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="nunit.framework">
-      <Package>..\..\..\lib\nunit.framework.dll</Package>
+      <Package>..\..\lib\nunit.framework.dll</Package>
     </Reference>
-<ProjectReference Include="..\..\Ximpleware.VTDXml\Ximpleware.VTDXml.csproj">
+    <ProjectReference Include="..\Ximpleware.VTDXml\Ximpleware.VTDXml.csproj">
       <Project>{CD97EC50-A767-4F12-9AC6-E63F0AB82851}</Project>
       <Name>Ximpleware.VTDXml</Name>
     </ProjectReference>

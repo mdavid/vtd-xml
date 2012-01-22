@@ -9,12 +9,12 @@ using com.ximpleware;
 // the original VTD structure doesn't change at all!!!
 using NUnit.Framework;
 
-namespace Ximpleware.Test
+namespace Ximpleware.VTDXml
 {
-		partial class Performance
+		partial class Test
 		{
 				[Test]
-				public static void Overwrite(string[] args)
+				public static void Overwrite()
 				{
 						VTDGen vg = new VTDGen();
 						vg.setDoc(getBytes("<root>good</root>"));

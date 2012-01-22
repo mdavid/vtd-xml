@@ -30,20 +30,20 @@ using System;
 using com.ximpleware;
 using NUnit.Framework;
 
-namespace Ximpleware.Test
+namespace Ximpleware.VTDXml
 {
-    partial class Performance
+    partial class Test
     {
         [Test]
-        public static void BufferReuse(string[] args)
+        public static void BufferReuse()
         {
             try
             {
                 int t;
-                System.IO.FileInfo f = new System.IO.FileInfo("./soap.xml");
+                System.IO.FileInfo f = new System.IO.FileInfo("./XmlTestFiles/soap.xml");
                 System.IO.FileStream fis =
                             new System.IO.FileStream(f.FullName, System.IO.FileMode.Open, System.IO.FileAccess.Read);
-                System.IO.FileInfo f1 = new System.IO.FileInfo("./out.xml");
+                System.IO.FileInfo f1 = new System.IO.FileInfo("./XmlTestFiles/out.xml");
                 System.IO.FileStream fos = new System.IO.FileStream(f1.FullName, System.IO.FileMode.Create);
                 byte[] b = new byte[(int)f.Length];
                 fis.Read(b, 0, (int)f.Length);

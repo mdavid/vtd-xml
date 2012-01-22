@@ -1,0 +1,3 @@
+#!/bin/sh -e
+MONO=$(which mono-sgen)
+exec $MONO --runtime=v4.0 --debug $MONO_OPTIONS $(dirname $0)/lib/nunit-console.exe "$@"

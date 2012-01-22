@@ -28,9 +28,9 @@ using System;
 using com.ximpleware;
 using NUnit.Framework;
 
-namespace Ximpleware.Test
+namespace Ximpleware.VTDXml
 {
-    public partial class Performance
+    public partial class Test
     {
         [Test]
         public static void BioInfoStats()
@@ -43,7 +43,7 @@ namespace Ximpleware.Test
                 // counting child elements of parlist named "par"
                 int par_count = 0;
                 VTDGen vg = new VTDGen();
-                if (vg.parseFile("./bioinfo.xml", true))
+                if (vg.parseFile("./XmlTestFiles/bioinfo.xml", true))
                 {
                     VTDNav vn = vg.getNav();
                     AutoPilot ap = new AutoPilot();

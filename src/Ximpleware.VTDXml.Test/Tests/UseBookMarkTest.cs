@@ -2,7 +2,7 @@ using System;
 using com.ximpleware;
 using NUnit.Framework;
 
-namespace Ximpleware.Test
+namespace Ximpleware.VTDXml
 {
 
     /* This example shows you how to use BookMark class.
@@ -14,7 +14,7 @@ namespace Ximpleware.Test
        * BookMark object's setCursorPosition() will restore VTDNav's 
        * object's cursor position.
        */
-    partial class Performance
+    partial class Test
     {
         [Test]
         public static void UseBookMark()
@@ -24,7 +24,7 @@ namespace Ximpleware.Test
             AutoPilot ap = new AutoPilot();
             ap.selectXPath("/CATALOG/CD[PRICE < 10]");
             BookMark bm = new BookMark();
-            if (vg.parseFile("cd.xml", false))
+            if (vg.parseFile("./XmlTestFiles/cd.xml", false))
             {
                 VTDNav vn = vg.getNav();
                 bm.bind(vn);

@@ -2,13 +2,13 @@ using System;
 using com.ximpleware;
 using NUnit.Framework;
 
-namespace Ximpleware.Test
+namespace Ximpleware.VTDXml
 {
 
-		partial class Performance
+		partial class Test
 		{
 				[Test]
-				public static void FragmentTest(String[] args)
+				public static void FragmentTest()
 				{
 						{
 								// instantiate VTDGen and XMLModifier
@@ -18,7 +18,7 @@ namespace Ximpleware.Test
 								AutoPilot ap2 = new AutoPilot();
 								ap.selectXPath("(/*/*/*)[position()>1 and position()<4]");
 								ap2.selectXPath("/*/*/*");
-								if (vg.parseFile("soap2.xml", true))
+								if (vg.parseFile("./XmlTestFiles/soap.xml", true))
 								{
 										VTDNav vn = vg.getNav();
 										xm.bind(vn);
@@ -31,7 +31,7 @@ namespace Ximpleware.Test
 										{
 												xm.insertAfterElement(ef);
 										}
-										xm.output("new_soap.xml");
+										xm.output("./XmlTestFiles/new_soap.xml");
 								}
 						}
 				}

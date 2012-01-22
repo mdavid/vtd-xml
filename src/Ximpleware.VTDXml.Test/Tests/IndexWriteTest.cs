@@ -4,19 +4,19 @@ using com.ximpleware;
 // This example shows you how to create an index
 using NUnit.Framework;
 
-namespace Ximpleware.Test
+namespace Ximpleware.VTDXml
 {
-    partial class Performance
+    partial class Test
     {
         [Test]
-        public static void IndexWrite(string[] args)
+        public static void IndexWrite()
         {
             try
             {
                 VTDGen vg = new VTDGen();
-                if (vg.parseFile("po.xml", true))
+                if (vg.parseFile("./XmlTestFiles/po.xml", true))
                 {
-                    vg.writeIndex("po.vxl");
+                    vg.writeIndex("./XmlTestFiles/po.vxl");
                 }
             }
             catch (Exception e)

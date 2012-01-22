@@ -1,5 +1,7 @@
-bin
-obj
+src/**/bin
+src/**/obj
+src/bin
+src/obj
 *.userprefs
 .DS_Store
 *.suo
