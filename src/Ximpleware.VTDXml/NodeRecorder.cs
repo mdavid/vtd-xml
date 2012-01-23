@@ -329,7 +329,7 @@ namespace com.ximpleware
                                     fib.append(vn.LN);
                                 break;
                         }
-                        
+
 
                     }
                     break;
@@ -356,7 +356,7 @@ namespace com.ximpleware
         public void clear()
         {
             size = position = count = 0;
-            fib.size_Renamed_Field=0;
+            fib.size_Renamed_Field = 0;
         }
 
 
@@ -598,7 +598,7 @@ namespace com.ximpleware
                                         count += i + 13;
                                     }
                                     break;
-                            }                            
+                            }
                         }
                         break;
                 }

@@ -18,20 +18,22 @@
 using System;
 namespace com.ximpleware
 {
-	/// <summary> This exception is thrown when an error occured during
-	/// the construction of XPathExpr 
-	/// 
-	/// </summary>
-	[Serializable]
+    /// <summary> This exception is thrown when an error occured during
+    /// the construction of XPathExpr 
+    /// 
+    /// </summary>
+    [Serializable]
 
-	public class XPathParseException:VTDException
-	{
+    public class XPathParseException : VTDException
+    {
         int i;
-		public XPathParseException(System.String s):base(s)
-		{
-		}
+        public XPathParseException(System.String s)
+            : base(s)
+        {
+        }
 
-        public XPathParseException(System.String s, int a):base(s)
+        public XPathParseException(System.String s, int a)
+            : base(s)
         {
             i = a;
 
@@ -40,5 +42,5 @@ namespace com.ximpleware
         {
             return i;
         }
-	}
+    }
 }

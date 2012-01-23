@@ -20,7 +20,7 @@ using System;
 
 namespace com.ximpleware.xpath
 {
-    public class VariableExpr:Expr
+    public class VariableExpr : Expr
     {
 
 
@@ -69,7 +69,7 @@ namespace com.ximpleware.xpath
         }
 
 
-      
+
         override public bool requireContextSize()
         {
             // TODO Auto-generated method stub

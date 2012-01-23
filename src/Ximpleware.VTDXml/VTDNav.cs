@@ -1354,12 +1354,12 @@ namespace com.ximpleware
             {
                 offset++;
             }
-            
+
             if (getCharUnit(offset - 1) == '/')
-                return (-1L <<32) | (long)offset;
+                return (-1L << 32) | (long)offset;
             else
                 return offset + 1;
-            
+
         }
 
         /// <summary> Get the token length at the given index value
@@ -1708,7 +1708,7 @@ namespace com.ximpleware
         /// </returns>
         /// <throws>  NavException </throws>
 
-        protected internal virtual bool  iterate_following(System.String en, bool special)
+        protected internal virtual bool iterate_following(System.String en, bool special)
         {
             int index = getCurrentIndex() + 1;
             //int size = vtdBuffer.size_Renamed_Field;
@@ -5513,7 +5513,7 @@ namespace com.ximpleware
             {
 
             }
-            else if (l1index !=-1 && context[1] > index
+            else if (l1index != -1 && context[1] > index
                     && l1index + 1 < l1Buffer.size_Renamed_Field
                     && l1Buffer.upper32At(l1index + 1) < index)
             {

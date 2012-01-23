@@ -8,25 +8,25 @@ namespace TUVienna.CS_CUP.Runtime
 	 *
 	 * @version last updated: 7/3/96
 	 * @author  Frank Flannery
-     * translated to C# 08.09.2003 by Samuel Imriska
+		 * translated to C# 08.09.2003 by Samuel Imriska
 	 */
 
 	/* ****************************************************************
-	  Class Symbol
-	  what the parser expects to receive from the lexer. 
-	  the token is identified as follows:
-	  sym:    the symbol type
-	  parse_state: the parse state.
-	  value:  is the lexical value of type Object
-	  left :  is the left position in the original input file
-	  right:  is the right position in the original input file
+		Class Symbol
+		what the parser expects to receive from the lexer. 
+		the token is identified as follows:
+		sym:    the symbol type
+		parse_state: the parse state.
+		value:  is the lexical value of type Object
+		left :  is the left position in the original input file
+		right:  is the right position in the original input file
 	******************************************************************/
 
 	public class Symbol 
 	{
 
 		/*******************************
-		  Constructor for l,r values
+			Constructor for l,r values
 		 *******************************/
 
 		public Symbol(int id, int l, int r, object o) :this(id)
@@ -37,19 +37,19 @@ namespace TUVienna.CS_CUP.Runtime
 		}
 
 		/*******************************
-		  Constructor for no l,r values
+			Constructor for no l,r values
 		********************************/
 
 		public Symbol(int id, object o) :this(id,-1,-1,o){	}
 
 		/*****************************
-		  Constructor for no value
-		  ***************************/
+			Constructor for no value
+			***************************/
 
 		public Symbol(int id, int l, int r) : this(id,l,r,null){	}
 
 		/***********************************
-		  Constructor for no value or l,r
+			Constructor for no value or l,r
 		***********************************/
 
 		public Symbol(int sym_num) : this(sym_num,-1)
@@ -60,7 +60,7 @@ namespace TUVienna.CS_CUP.Runtime
 		}
 
 		/***********************************
-		  Constructor to give a start state
+			Constructor to give a start state
 		***********************************/
 		public Symbol(int sym_num, int state)
 		{
@@ -85,15 +85,15 @@ namespace TUVienna.CS_CUP.Runtime
 		public bool used_by_parser = false;
 
 		/*******************************
-		  The data passed to parser
+			The data passed to parser
 		 *******************************/
 
 		public int left, right;
 		public object value;
 
 		/*****************************
-		  Printing this token out. (Override for pretty-print).
-		  ****************************/
+			Printing this token out. (Override for pretty-print).
+			****************************/
 		public override string ToString() { return "#"+sym; }
 	}
 }

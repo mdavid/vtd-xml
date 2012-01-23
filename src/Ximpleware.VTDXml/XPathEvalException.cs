@@ -18,15 +18,16 @@
 using System;
 namespace com.ximpleware
 {
-	/// <summary> This exception is thrown when there is something
-	/// during XPath evaluation
-	/// 
-	/// </summary>
-	[Serializable]
-	public class XPathEvalException:VTDException
-	{
-		public XPathEvalException(System.String s):base(s)
-		{
-		}
-	}
+    /// <summary> This exception is thrown when there is something
+    /// during XPath evaluation
+    /// 
+    /// </summary>
+    [Serializable]
+    public class XPathEvalException : VTDException
+    {
+        public XPathEvalException(System.String s)
+            : base(s)
+        {
+        }
+    }
 }

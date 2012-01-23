@@ -28,9 +28,9 @@ namespace com.ximpleware
 	/// </summary>
 	public class FilterExpr:Expr
 	{
-        public override int adjust(int n) {
-            return e.adjust(n);
-        }
+				public override int adjust(int n) {
+						return e.adjust(n);
+				}
 		override public bool Numerical
 		{
 			get
@@ -134,15 +134,15 @@ namespace com.ximpleware
 		
 		public override double evalNumber(VTDNav vn)
 		{
-            int a = getStringIndex(vn);
-            try
-            {
-                if (a != -1) return vn.parseDouble(a);
-            }
-            catch (NavException e)
-            {
-            }
-            return Double.NaN;
+						int a = getStringIndex(vn);
+						try
+						{
+								if (a != -1) return vn.parseDouble(a);
+						}
+						catch (NavException e)
+						{
+						}
+						return Double.NaN;
 		}
 		
 		public override int evalNodeSet(VTDNav vn)
@@ -161,7 +161,7 @@ namespace com.ximpleware
 				first_time = false;
 				int i = 0;
 				//vn.push2();
-                e.adjust(vn.getTokenCount());
+								e.adjust(vn.getTokenCount());
 				while (e.evalNodeSet(vn) != - 1)
 					i++;
 				//vn.pop2();
@@ -187,18 +187,18 @@ namespace com.ximpleware
 		
 		public override System.String evalString(VTDNav vn)
 		{
-            //if (e.isString())
-            //     return e.evalString(vn);
-            int a = getStringIndex(vn);
-            try
-            {
-                if (a != -1)
-                    return vn.toString(a);
-            }
-            catch (NavException e)
-            {
-            }
-            return "";
+						//if (e.isString())
+						//     return e.evalString(vn);
+						int a = getStringIndex(vn);
+						try
+						{
+								if (a != -1)
+										return vn.toString(a);
+						}
+						catch (NavException e)
+						{
+						}
+						return "";
 		}
 		
 		public override void  reset(VTDNav vn)

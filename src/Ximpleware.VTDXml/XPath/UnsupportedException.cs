@@ -18,14 +18,15 @@
 using System;
 namespace com.ximpleware.xpath
 {
-	/// <summary> This exception is thrown when a feature is not supported.
-	/// 
-	/// </summary>
-	[Serializable]
-	public class UnsupportedException:System.SystemException
-	{
-		public UnsupportedException(System.String s):base(s)
-		{
-		}
-	}
+    /// <summary> This exception is thrown when a feature is not supported.
+    /// 
+    /// </summary>
+    [Serializable]
+    public class UnsupportedException : System.SystemException
+    {
+        public UnsupportedException(System.String s)
+            : base(s)
+        {
+        }
+    }
 }

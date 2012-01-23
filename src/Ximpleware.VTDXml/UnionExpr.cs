@@ -33,21 +33,21 @@ namespace com.ximpleware
 		
 		internal int state;
 
-        public override int adjust(int n)
-        {
-            int i = e.adjust(n);
-            if (ih != null && i == ih.e)
-            { }
-            else
-                ih = new intHash(i);
-            UnionExpr tmp = this.next;
-            while (tmp != null)
-            {
-                tmp.e.adjust(n);
-                tmp = tmp.next;
-            }
-            return i;
-        }
+				public override int adjust(int n)
+				{
+						int i = e.adjust(n);
+						if (ih != null && i == ih.e)
+						{ }
+						else
+								ih = new intHash(i);
+						UnionExpr tmp = this.next;
+						while (tmp != null)
+						{
+								tmp.e.adjust(n);
+								tmp = tmp.next;
+						}
+						return i;
+				}
 		public UnionExpr(Expr e1)
 		{
 			e = e1;
@@ -64,42 +64,42 @@ namespace com.ximpleware
 		*/
 		public override bool evalBoolean(VTDNav vn)
 		{
-            if (e.NodeSet==false)
-            {
-                return e.evalBoolean(vn);
-            }
-            else
-            {
-                bool a = false;
-                vn.push2();
-                // record teh stack size
-                int size = vn.contextStack2.size;
-                try
-                {
-                    a = (evalNodeSet(vn) != -1);
-                }
-                catch (System.Exception ee)
-                {
-                }
-                //rewind stack
-                vn.contextStack2.size = size;
-                reset(vn);
-                vn.pop2();
-                return a;
-            }
-            /*if (e.Numerical)
-            {
-                double dval = e.evalNumber(vn);
+						if (e.NodeSet==false)
+						{
+								return e.evalBoolean(vn);
+						}
+						else
+						{
+								bool a = false;
+								vn.push2();
+								// record teh stack size
+								int size = vn.contextStack2.size;
+								try
+								{
+										a = (evalNodeSet(vn) != -1);
+								}
+								catch (System.Exception ee)
+								{
+								}
+								//rewind stack
+								vn.contextStack2.size = size;
+								reset(vn);
+								vn.pop2();
+								return a;
+						}
+						/*if (e.Numerical)
+						{
+								double dval = e.evalNumber(vn);
 
-                if (dval == 0.0 || System.Double.IsNaN(dval))
-                    return false;
-                return true;
-            }
+								if (dval == 0.0 || System.Double.IsNaN(dval))
+										return false;
+								return true;
+						}
 
-            String s = e.evalString(vn);
-            if (s == null || s.Length == 0)
-                return false;
-            return true;*/
+						String s = e.evalString(vn);
+						if (s == null || s.Length == 0)
+								return false;
+						return true;*/
 
 		}
 		
@@ -110,18 +110,18 @@ namespace com.ximpleware
 		*/
 		public override double evalNumber(VTDNav vn)
 		{
-            if (e.NodeSet==false)
-                return e.evalNumber(vn);
-            int a = getStringIndex(vn);
-            try
-            {
-                if (a != -1)
-                    return vn.parseDouble(a);
-            }
-            catch (NavException ee)
-            {
-            }
-            return Double.NaN;
+						if (e.NodeSet==false)
+								return e.evalNumber(vn);
+						int a = getStringIndex(vn);
+						try
+						{
+								if (a != -1)
+										return vn.parseDouble(a);
+						}
+						catch (NavException ee)
+						{
+						}
+						return Double.NaN;
 		}
 		
 		/*
@@ -145,7 +145,7 @@ namespace com.ximpleware
 						
 						case 0: 
 							if (ih == null)
-							  ih = new intHash();
+								ih = new intHash();
 							if (current != null)
 							{
 								vn.push2();
@@ -225,19 +225,19 @@ namespace com.ximpleware
 		*/
 		public override System.String evalString(VTDNav vn)
 		{
-              if (e.NodeSet == false){
-                return e.evalString(vn);                
-              }
-              int a = getStringIndex(vn);
-              try
-              {
-                  if (a != -1)
-                      return vn.toString(a);
-              }
-              catch (NavException ee)
-              {
-              }
-              return "";
+							if (e.NodeSet == false){
+								return e.evalString(vn);                
+							}
+							int a = getStringIndex(vn);
+							try
+							{
+									if (a != -1)
+											return vn.toString(a);
+							}
+							catch (NavException ee)
+							{
+							}
+							return "";
 		}
 		
 		/*
@@ -287,11 +287,11 @@ namespace com.ximpleware
 		*/
 		public override bool Numerical
 		{
-            get
-            {
-                // TODO Auto-generated method stub
-                return e.Numerical;
-            }
+						get
+						{
+								// TODO Auto-generated method stub
+								return e.Numerical;
+						}
 		}
 		
 		/*
@@ -301,11 +301,11 @@ namespace com.ximpleware
 		*/
 		public override bool NodeSet
 		{
-            get
-            {
-                // TODO Auto-generated method stub
-                return e.NodeSet;
-            }
+						get
+						{
+								// TODO Auto-generated method stub
+								return e.NodeSet;
+						}
 		}
 		
 		/*
@@ -315,11 +315,11 @@ namespace com.ximpleware
 		*/
 		public override bool String
 		{
-            get
-            {
-                // TODO Auto-generated method stub
-                return e.String;
-            }
+						get
+						{
+								// TODO Auto-generated method stub
+								return e.String;
+						}
 		}
 		
 		/*
@@ -329,11 +329,11 @@ namespace com.ximpleware
 		*/
 		public override bool Boolean
 		{
-            get
-            {
-                // TODO Auto-generated method stub
-                return false;
-            }
+						get
+						{
+								// TODO Auto-generated method stub
+								return false;
+						}
 		}
 		
 		/*
@@ -343,17 +343,17 @@ namespace com.ximpleware
 		*/
 		public override bool requireContextSize()
 		{
-            //bool b = false;
-            UnionExpr tmp = this;
-            while (tmp != null)
-            {
-                if (tmp.e.requireContextSize() == true)
-                {
-                    return true;
-                }
-                tmp = tmp.next;
-            }
-            return false;
+						//bool b = false;
+						UnionExpr tmp = this;
+						while (tmp != null)
+						{
+								if (tmp.e.requireContextSize() == true)
+								{
+										return true;
+								}
+								tmp = tmp.next;
+						}
+						return false;
 		}
 		
 		/*
@@ -361,43 +361,43 @@ namespace com.ximpleware
 		* 
 		* @see com.ximpleware.xpath.Expr#setContextSize(int)
 		*/
-        override public int ContextSize
-        {
-            set
-            {
-                current = this;
-                current.e.ContextSize = value;
-                UnionExpr tmp = this.next;
-                while (tmp != null)
-                {
-                    tmp.e.ContextSize = value;
-                    tmp = tmp.next;
-                }
-            }
+				override public int ContextSize
+				{
+						set
+						{
+								current = this;
+								current.e.ContextSize = value;
+								UnionExpr tmp = this.next;
+								while (tmp != null)
+								{
+										tmp.e.ContextSize = value;
+										tmp = tmp.next;
+								}
+						}
 
-        }
+				}
 		
 		/*
 		* (non-Javadoc)
 		* 
 		* @see com.ximpleware.xpath.Expr#setPosition(int)
 		*/
-        override public int Position
-        {
-            set
-            {
-                current = this;
-                current.e.Position = value;
-                UnionExpr tmp = this.next;
-                while (tmp != null)
-                {
-                    tmp.e.Position = value;
-                    tmp = tmp.next;
-                }
+				override public int Position
+				{
+						set
+						{
+								current = this;
+								current.e.Position = value;
+								UnionExpr tmp = this.next;
+								while (tmp != null)
+								{
+										tmp.e.Position = value;
+										tmp = tmp.next;
+								}
 
-            }
+						}
 
-        }
+				}
 		
 		public virtual bool isUnique(int i)
 		{

@@ -18,33 +18,33 @@
 using System;
 namespace com.ximpleware.xpath
 {
-	/// <summary> 
-	/// This class is used by Yylex to detect axis type
-	/// and transport to the parser
-	/// 
-	/// </summary>
-	public class AxisType
-	{
-		
-		public int i;
-		public const int CHILD = 0;
-		public const int ANCESTOR = 3;
-		public const int ANCESTOR_OR_SELF = 12;
-		public const int ATTRIBUTE = 8;
-		
-		public const int DESCENDANT = 1;
-		public const int DESCENDANT_OR_SELF = 11;
-		public const int FOLLOWING = 6;
-		public const int FOLLOWING_SIBLING = 4;
-		public const int NAMESPACE = 9;
-		public const int PARENT = 2;
-		public const int PRECEDING = 7;
-		public const int PRECEDING_SIBLING = 5;
-		public const int SELF = 10;
-		
-		public AxisType()
-		{
-		}
+    /// <summary> 
+    /// This class is used by Yylex to detect axis type
+    /// and transport to the parser
+    /// 
+    /// </summary>
+    public class AxisType
+    {
+
+        public int i;
+        public const int CHILD = 0;
+        public const int ANCESTOR = 3;
+        public const int ANCESTOR_OR_SELF = 12;
+        public const int ATTRIBUTE = 8;
+
+        public const int DESCENDANT = 1;
+        public const int DESCENDANT_OR_SELF = 11;
+        public const int FOLLOWING = 6;
+        public const int FOLLOWING_SIBLING = 4;
+        public const int NAMESPACE = 9;
+        public const int PARENT = 2;
+        public const int PRECEDING = 7;
+        public const int PRECEDING_SIBLING = 5;
+        public const int SELF = 10;
+
+        public AxisType()
+        {
+        }
 
         public String getAxisString()
         {
@@ -66,5 +66,5 @@ namespace com.ximpleware.xpath
             }
         }
 
-	}
+    }
 }

@@ -18,7 +18,7 @@ namespace TUVienna.CS_CUP
 	 *
 	 * @version last updated: 12/22/97 [CSA]
 	 * @author  Frank Flannery
-     * translated to C# 08.09.2003 by Samuel Imriska
+		 * translated to C# 08.09.2003 by Samuel Imriska
 	 */
 
 	public class version 

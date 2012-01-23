@@ -9,20 +9,20 @@ namespace TUVienna.CS_CUP
 	 *  of extra bookkeeping so that we know where we came from.
 	 * @version last updated: 11/25/95
 	 * @author  Scott Hudson
-     * translated to C# 08.09.2003 by Samuel Imriska
+		 * translated to C# 08.09.2003 by Samuel Imriska
 	 */
 
 	public class action_production : production 
-								   {
+									 {
 
-									   /** Constructor.
+										 /** Constructor.
 										* @param base       the production we are being factored out of.
 										* @param lhs_sym    the LHS symbol for this production.
 										* @param rhs_parts  array of production parts for the RHS.
 										* @param rhs_len    how much of the rhs_parts array is valid.
 										* @param action_str the trailing reduce action for this production.
 										*/ 
-	   public action_production(
+		 public action_production(
 		production      cbase,
 		non_terminal    lhs_sym, 
 			production_part[] rhs_parts,

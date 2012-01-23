@@ -19,41 +19,41 @@ using System;
 using com.ximpleware;
 namespace com.ximpleware.xpath
 {
-	/// <summary> 
-	/// This class implements the argumentList for FuncExpr
-	/// which is basically a linked-list of expressions
-	/// </summary>
-	public class Alist
-	{
-		
-		public Expr e;
-		public Alist next;
-		public Alist()
-		{
-			next = null;
-		}
-		public override System.String ToString()
-		{
-			Alist temp = this;
-			System.String s = "";
-			while (temp != null)
-			{
-				s = s + temp.e;
-				temp = temp.next;
-				if (temp != null)
-					s = s + " ,";
-			}
-			return s;
-		}
-		
-		public void  reset(VTDNav vn)
-		{
-			Alist temp = this;
-			while (temp != null)
-			{
-				temp.e.reset(vn);
-				temp = temp.next;
-			}
-		}
-	}
+    /// <summary> 
+    /// This class implements the argumentList for FuncExpr
+    /// which is basically a linked-list of expressions
+    /// </summary>
+    public class Alist
+    {
+
+        public Expr e;
+        public Alist next;
+        public Alist()
+        {
+            next = null;
+        }
+        public override System.String ToString()
+        {
+            Alist temp = this;
+            System.String s = "";
+            while (temp != null)
+            {
+                s = s + temp.e;
+                temp = temp.next;
+                if (temp != null)
+                    s = s + " ,";
+            }
+            return s;
+        }
+
+        public void reset(VTDNav vn)
+        {
+            Alist temp = this;
+            while (temp != null)
+            {
+                temp.e.reset(vn);
+                temp = temp.next;
+            }
+        }
+    }
 }

@@ -497,19 +497,19 @@ namespace com.ximpleware
                 case FuncName.SUBSTRING: return subString(vn);
                 case FuncName.TRANSLATE: return translate(vn);
                 case FuncName.NORMALIZE_SPACE: return normalizeSpace(vn);
-                case FuncName.CODE_POINTS_TO_STRING: 
+                case FuncName.CODE_POINTS_TO_STRING:
                     throw new com.ximpleware.xpath.UnsupportedException("not yet implemented");
-   			    case FuncName.UPPER_CASE: return upperCase(vn);
+                case FuncName.UPPER_CASE: return upperCase(vn);
                 case FuncName.LOWER_CASE: return lowerCase(vn);
-   			    case FuncName.QNAME:
-   			    case FuncName.LOCAL_NAME_FROM_QNAME:
-   			    case FuncName.NAMESPACE_URI_FROM_QNAME:
-   			    case FuncName.NAMESPACE_URI_FOR_PREFIX:
-   			    case FuncName.RESOLVE_QNAME:
-   			    case FuncName.IRI_TO_URI:
-   			    case FuncName.ESCAPE_HTML_URI:
-   			    case FuncName.ENCODE_FOR_URI:
-   			        throw new com.ximpleware.xpath.UnsupportedException("not yet implemented");
+                case FuncName.QNAME:
+                case FuncName.LOCAL_NAME_FROM_QNAME:
+                case FuncName.NAMESPACE_URI_FROM_QNAME:
+                case FuncName.NAMESPACE_URI_FOR_PREFIX:
+                case FuncName.RESOLVE_QNAME:
+                case FuncName.IRI_TO_URI:
+                case FuncName.ESCAPE_HTML_URI:
+                case FuncName.ENCODE_FOR_URI:
+                    throw new com.ximpleware.xpath.UnsupportedException("not yet implemented");
 
                 default: if (Boolean)
                     {
@@ -661,7 +661,7 @@ namespace com.ximpleware
                         throw new System.ArgumentException("abs()'s argument count is invalid");
                     //UPGRADE_TODO: Method 'java.lang.Math.round' was converted to 'System.Math.Round' which has a different behavior. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1073_javalangMathround_double'"
                     return (long)System.Math.Abs(argumentList.e.evalNumber(vn));
-                case FuncName.ROUND_HALF_TO_EVEN :
+                case FuncName.ROUND_HALF_TO_EVEN:
                     int numArg = argCount();
                     if (numArg < 1 || numArg > 2)
                     {
@@ -672,8 +672,8 @@ namespace com.ximpleware
                     int precision = (numArg == 2) ? (int)Math.Floor(argumentList.next.e.evalNumber(vn) + 0.5d) : 0;
                     return (long)System.Math.Round(value, precision, MidpointRounding.ToEven);
 
-   			    case FuncName.ROUND_HALF_TO_ODD:
-   			        throw new com.ximpleware.xpath.UnsupportedException("not yet implemented");
+                case FuncName.ROUND_HALF_TO_ODD:
+                    throw new com.ximpleware.xpath.UnsupportedException("not yet implemented");
 
                 default: if (isBoolean_Renamed_Field)
                     {
@@ -758,7 +758,7 @@ namespace com.ximpleware
                         throw new System.ArgumentException("ends-with()'s argument count is invalid");
                     }
                     return endsWith(vn);
-          				
+
                 default: if (Numerical)
                     {
                         double d = evalNumber(vn);
@@ -839,7 +839,7 @@ namespace com.ximpleware
                 case FuncName.CEILING: return "ceiling";
 
                 case FuncName.ROUND: return "round";
-                    // added for 2.0
+                // added for 2.0
                 case FuncName.ABS: return "abs";
                 case FuncName.ROUND_HALF_TO_EVEN:
                     return "round-half-to-even";
@@ -1098,9 +1098,9 @@ namespace com.ximpleware
                         if (System.Double.IsNaN(d))
                             break;
                     }
-                    else if (t == VTDNav.TOKEN_CHARACTER_DATA 
+                    else if (t == VTDNav.TOKEN_CHARACTER_DATA
                         || t == VTDNav.TOKEN_CDATA_VAL
-                        || t== VTDNav.TOKEN_COMMENT)
+                        || t == VTDNav.TOKEN_COMMENT)
                     {
                         d = d + vn.parseDouble(a);
                         if (System.Double.IsNaN(d))

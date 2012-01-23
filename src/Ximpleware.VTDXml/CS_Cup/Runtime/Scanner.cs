@@ -8,18 +8,18 @@ namespace TUVienna.CS_CUP.Runtime
 	 *
 	 * @version last updated 23-Jul-1999
 	 * @author David MacMahon <davidm@smartsc.com>
-     * translated to C# 08.09.2003 by Samuel Imriska
+		 * translated to C# 08.09.2003 by Samuel Imriska
 	 */
 
 	/* *************************************************
-	  Interface Scanner
-  
-	  Declares the next_token() method that should be
-	  implemented by scanners.  This method is typically
-	  called by lr_parser.scan().  End-of-file can be
-	  indicated either by returning
-	  <code>new Symbol(lr_parser.EOF_sym())</code> or
-	  <code>null</code>.
+		Interface Scanner
+	
+		Declares the next_token() method that should be
+		implemented by scanners.  This method is typically
+		called by lr_parser.scan().  End-of-file can be
+		indicated either by returning
+		<code>new Symbol(lr_parser.EOF_sym())</code> or
+		<code>null</code>.
 	 ***************************************************/
 	public interface Scanner 
 	{

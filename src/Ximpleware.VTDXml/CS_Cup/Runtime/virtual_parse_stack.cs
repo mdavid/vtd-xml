@@ -18,7 +18,7 @@ namespace TUVienna.CS_CUP.Runtime
 	 * @see     java_cup.runtime.lr_parser
 	 * @version last updated: 7/3/96
 	 * @author  Frank Flannery
-     * translated to C# 08.09.2003 by Samuel Imriska
+		 * translated to C# 08.09.2003 by Samuel Imriska
 	 */
 
 	public class virtual_parse_stack 
@@ -29,11 +29,11 @@ namespace TUVienna.CS_CUP.Runtime
 
 		/** Constructor to build a virtual stack out of a real stack. */
 		public virtual_parse_stack(Stack shadowing_stack) 
-														  {
-															  /* sanity check */
-															  if (shadowing_stack == null)
+															{
+																/* sanity check */
+																if (shadowing_stack == null)
 		throw new System.Exception(
-				  "Internal parser error: attempt to create null virtual stack");
+					"Internal parser error: attempt to create null virtual stack");
 
 		/* Set up our internals */
 		real_stack = shadowing_stack;
@@ -47,7 +47,7 @@ namespace TUVienna.CS_CUP.Runtime
 	/*-----------------------------------------------------------*/
 	/*--- (Access to) Instance Variables ------------------------*/
 	/*-----------------------------------------------------------*/
-       
+			 
 	/** The real stack that we shadow.  This is accessed when we move off
 	 *  the bottom of the virtual portion of the stack, but is always left
 	 *  unmodified.
@@ -107,7 +107,7 @@ namespace TUVienna.CS_CUP.Runtime
 }
 
 	/*. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .*/
-      
+			
 	/** Return value on the top of the stack (without popping it). */
 	public int top()
 {

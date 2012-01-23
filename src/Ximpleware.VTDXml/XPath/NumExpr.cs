@@ -19,119 +19,119 @@ using System;
 using com.ximpleware;
 namespace com.ximpleware.xpath
 {
-	/// <summary> This class represent an XPath that is a double
-	/// 
-	/// </summary>
-	public class NumExpr:Expr
-	{
-		override public bool NodeSet
-		{
-			get
-			{
-				return false;
-			}
-			
-		}
-		override public bool Numerical
-		{
-			get
-			{
-				return true;
-			}
-			
-		}
-		override public bool String
-		{
-			get
-			{
-				return false;
-			}
-			
-		}
-		override public bool Boolean
-		{
-			get
-			{
-				return false;
-			}
-			
-		}
-		override public int ContextSize
-		{
-			set
-			{
-			}
-			
-		}
-		override public int Position
-		{
-			set
-			{
-				
-			}
-			
-		}
-		public double dval;
-		public NumExpr(double d)
-		{
-			dval = d;
-		}
-		public override System.String ToString()
-		{
-			//UPGRADE_WARNING: Data types in Visual C# might be different.  Verify the accuracy of narrowing conversions. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1042'"
-			if (dval == (long) dval)
-			{
-				//UPGRADE_WARNING: Data types in Visual C# might be different.  Verify the accuracy of narrowing conversions. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1042'"
-				return "" + (long) dval;
-			}
-			return "" + dval;
-		}
-		
-		public double eval()
-		{
-			return dval;
-		}
-		
-		public override bool evalBoolean(VTDNav vn)
-		{
-			if (dval == 0.0 || System.Double.IsNaN(dval))
-				return false;
-			return true;
-		}
-		
-		public override double evalNumber(VTDNav vn)
-		{
-			return dval;
-		}
-		
-		public override int evalNodeSet(VTDNav vn)
-		{
-			
-			throw new XPathEvalException("NumExpr can't eval to a node set!");
-		}
-		
-		public override System.String evalString(VTDNav vn)
-		{
-			//UPGRADE_WARNING: Data types in Visual C# might be different.  Verify the accuracy of narrowing conversions. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1042'"
-			if (dval == (int) dval)
-			{
-				//UPGRADE_WARNING: Data types in Visual C# might be different.  Verify the accuracy of narrowing conversions. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1042'"
-				return "" + ((int) dval);
-			}
-			return "" + dval;
-		}
-		
-		public override void  reset(VTDNav vn)
-		{
-		}
-		
-		// to support computer context size 
-		// needs to add 
-		public override bool requireContextSize()
-		{
-			return false;
-		}
+    /// <summary> This class represent an XPath that is a double
+    /// 
+    /// </summary>
+    public class NumExpr : Expr
+    {
+        override public bool NodeSet
+        {
+            get
+            {
+                return false;
+            }
+
+        }
+        override public bool Numerical
+        {
+            get
+            {
+                return true;
+            }
+
+        }
+        override public bool String
+        {
+            get
+            {
+                return false;
+            }
+
+        }
+        override public bool Boolean
+        {
+            get
+            {
+                return false;
+            }
+
+        }
+        override public int ContextSize
+        {
+            set
+            {
+            }
+
+        }
+        override public int Position
+        {
+            set
+            {
+
+            }
+
+        }
+        public double dval;
+        public NumExpr(double d)
+        {
+            dval = d;
+        }
+        public override System.String ToString()
+        {
+            //UPGRADE_WARNING: Data types in Visual C# might be different.  Verify the accuracy of narrowing conversions. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1042'"
+            if (dval == (long)dval)
+            {
+                //UPGRADE_WARNING: Data types in Visual C# might be different.  Verify the accuracy of narrowing conversions. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1042'"
+                return "" + (long)dval;
+            }
+            return "" + dval;
+        }
+
+        public double eval()
+        {
+            return dval;
+        }
+
+        public override bool evalBoolean(VTDNav vn)
+        {
+            if (dval == 0.0 || System.Double.IsNaN(dval))
+                return false;
+            return true;
+        }
+
+        public override double evalNumber(VTDNav vn)
+        {
+            return dval;
+        }
+
+        public override int evalNodeSet(VTDNav vn)
+        {
+
+            throw new XPathEvalException("NumExpr can't eval to a node set!");
+        }
+
+        public override System.String evalString(VTDNav vn)
+        {
+            //UPGRADE_WARNING: Data types in Visual C# might be different.  Verify the accuracy of narrowing conversions. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1042'"
+            if (dval == (int)dval)
+            {
+                //UPGRADE_WARNING: Data types in Visual C# might be different.  Verify the accuracy of narrowing conversions. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1042'"
+                return "" + ((int)dval);
+            }
+            return "" + dval;
+        }
+
+        public override void reset(VTDNav vn)
+        {
+        }
+
+        // to support computer context size 
+        // needs to add 
+        public override bool requireContextSize()
+        {
+            return false;
+        }
 
         public override int adjust(int n) { return 0; }
-	}
+    }
 }
