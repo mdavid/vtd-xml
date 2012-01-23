@@ -24,7 +24,7 @@ namespace Ximpleware.VTDXml
             {
                 xm.updateElementName("d:/lalalala");
             }
-            xm.output("./XmlTestFiles/lala.xml");
+            xm.output("./XmlDataFiles/lala.xml");
         }
     }
 }

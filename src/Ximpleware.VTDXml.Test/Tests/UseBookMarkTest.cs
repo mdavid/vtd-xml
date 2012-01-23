@@ -24,7 +24,7 @@ namespace Ximpleware.VTDXml
             AutoPilot ap = new AutoPilot();
             ap.selectXPath("/CATALOG/CD[PRICE < 10]");
             BookMark bm = new BookMark();
-            if (vg.parseFile("./XmlTestFiles/cd.xml", false))
+            if (vg.parseFile("./XmlDataFiles/cd.xml", false))
             {
                 VTDNav vn = vg.getNav();
                 bm.bind(vn);

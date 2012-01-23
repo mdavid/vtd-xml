@@ -40,10 +40,10 @@ namespace Ximpleware.VTDXml
             try
             {
                 int t;
-                System.IO.FileInfo f = new System.IO.FileInfo("./XmlTestFiles/soap.xml");
+                System.IO.FileInfo f = new System.IO.FileInfo("./XmlDataFiles/soap.xml");
                 System.IO.FileStream fis =
                             new System.IO.FileStream(f.FullName, System.IO.FileMode.Open, System.IO.FileAccess.Read);
-                System.IO.FileInfo f1 = new System.IO.FileInfo("./XmlTestFiles/out.xml");
+                System.IO.FileInfo f1 = new System.IO.FileInfo("./XmlDataFiles/out.xml");
                 System.IO.FileStream fos = new System.IO.FileStream(f1.FullName, System.IO.FileMode.Create);
                 byte[] b = new byte[(int)f.Length];
                 fis.Read(b, 0, (int)f.Length);

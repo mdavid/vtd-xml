@@ -29,16 +29,12 @@
     <Externalconsole>true</Externalconsole>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="pnunit.framework, Version=1.0.4399.30232, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\lib\pnunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
     <Reference Include="nunit.framework">
       <Package>..\..\lib\nunit.framework.dll</Package>
     </Reference>
-    <ProjectReference Include="..\Ximpleware.VTDXml\Ximpleware.VTDXml.csproj">
+    <ProjectReference Include="..\Ximpleware.VTDXml\XimpleWare.VTDXml.csproj">
       <Project>{CD97EC50-A767-4F12-9AC6-E63F0AB82851}</Project>
-      <Name>Ximpleware.VTDXml</Name>
+      <Name>XimpleWare.VTDXml</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

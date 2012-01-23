@@ -14,9 +14,9 @@ namespace Ximpleware.VTDXml
             try
             {
                 VTDGen vg = new VTDGen();
-                if (vg.parseFile("./XmlTestFiles/po.xml", true))
+                if (vg.parseFile("./XmlDataFiles/po.xml", true))
                 {
-                    vg.writeIndex("./XmlTestFiles/po.vxl");
+                    vg.writeIndex("./XmlDataFiles/po.vxl");
                 }
             }
             catch (Exception e)

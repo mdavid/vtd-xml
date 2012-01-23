@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="/Users/mdavid/Projects/Ximpleware/src/bin/Release/Ximpleware.VTDXml.Test.exe" total="16" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-01-22" time="11:28:18">
+  <environment nunit-version="2.6.0.12017" clr-version="4.0.30319.1" os-version="Unix 11.2.0.0" platform="Unix" cwd="/Users/mdavid/Projects/Ximpleware" machine-name="mdavidmbp.local" user="mdavid" user-domain="mdavidmbp.local" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="/Users/mdavid/Projects/Ximpleware/src/bin/Release/Ximpleware.VTDXml.Test.exe" executed="True" result="Success" success="True" time="0.509" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Ximpleware" executed="True" result="Success" success="True" time="0.491" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="VTDXml" executed="True" result="Success" success="True" time="0.490" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="Test" executed="True" result="Success" success="True" time="0.489" asserts="0">
+                <results>
+                  <test-case name="Ximpleware.VTDXml.Test.BioInfoStats" executed="True" result="Success" success="True" time="0.161" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.BufferReuse" executed="True" result="Success" success="True" time="0.044" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.ChangeElementName" executed="True" result="Success" success="True" time="0.013" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.DuplicateNav" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.Erase" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.FragmentTest" executed="True" result="Success" success="True" time="0.029" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.IndexLoad" executed="True" result="Success" success="True" time="0.024" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.IndexWrite" executed="True" result="Success" success="True" time="0.017" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.Overwrite" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.RSSReader" executed="True" result="Success" success="True" time="0.029" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.SeparateIndex" executed="True" result="Success" success="True" time="0.006" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.Shuffle" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.SOAPProcessor" executed="True" result="Success" success="True" time="0.034" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.TestNodeRecorder" executed="True" result="Success" success="True" time="0.010" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.Update" executed="True" result="Success" success="True" time="0.028" asserts="0" />
+                  <test-case name="Ximpleware.VTDXml.Test.UseBookMark" executed="True" result="Success" success="True" time="0.010" asserts="0" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

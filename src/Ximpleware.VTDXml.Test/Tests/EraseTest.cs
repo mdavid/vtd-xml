@@ -16,9 +16,9 @@ namespace Ximpleware.VTDXml
             //ap.selectXPath("/*/*/*");
             AutoPilot ap2 = new AutoPilot();
             ap2.selectXPath("//@*");
-            if (vg.parseFile("./XmlTestFiles/soap.xml", true))
+            if (vg.parseFile("./XmlDataFiles/soap.xml", true))
             {
-                FileStream fs = new FileStream("./XmlTestFiles/output.xml", System.IO.FileMode.OpenOrCreate);
+                FileStream fs = new FileStream("./XmlDataFiles/output.xml", System.IO.FileMode.OpenOrCreate);
                 VTDNav vn = vg.getNav();
                 ap.bind(vn);
                 ap2.bind(vn);

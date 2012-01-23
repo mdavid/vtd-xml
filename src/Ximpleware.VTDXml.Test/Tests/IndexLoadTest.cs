@@ -15,7 +15,7 @@ namespace Ximpleware.VTDXml
             try
             {
                 VTDGen vg = new VTDGen();
-                VTDNav vn = vg.loadIndex("./XmlTestFiles/po.vxl");
+                VTDNav vn = vg.loadIndex("./XmlDataFiles/po.vxl");
                 AutoPilot ap = new AutoPilot(vn);
                 ap.selectXPath("//items");
                 int i;

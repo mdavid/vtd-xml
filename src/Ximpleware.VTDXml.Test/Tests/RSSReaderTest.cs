@@ -33,7 +33,7 @@ namespace Ximpleware.VTDXml
             {
                 // open a file and read the content into a byte array
                 VTDGen vg = new VTDGen();
-                if (vg.parseFile("./XmlTestFiles/servers.xml", true))
+                if (vg.parseFile("./XmlDataFiles/servers.xml", true))
                 {
                     VTDNav vn = vg.getNav();
                     AutoPilot ap = new AutoPilot(vn);

@@ -19,7 +19,7 @@ namespace Ximpleware.VTDXml
         {
             VTDGen vg = new VTDGen();
             int i;
-            if (vg.parseFile("./XmlTestFiles/po.xml", true))
+            if (vg.parseFile("./XmlDataFiles/po.xml", true))
             {
                 // instantiate a node recorder here
                 NodeRecorder nr = new NodeRecorder();

@@ -1,0 +1,3 @@
+
+Please visit http://vtd-xml.sourceforge.net/userGuide/0.html
+for most up-to-date user's guide.

@@ -43,7 +43,7 @@ namespace Ximpleware.VTDXml
                 // counting child elements of parlist named "par"
                 int par_count = 0;
                 VTDGen vg = new VTDGen();
-                if (vg.parseFile("./XmlTestFiles/bioinfo.xml", true))
+                if (vg.parseFile("./XmlDataFiles/bioinfo.xml", true))
                 {
                     VTDNav vn = vg.getNav();
                     AutoPilot ap = new AutoPilot();

@@ -32,7 +32,7 @@ namespace Ximpleware.VTDXml
         public static void DuplicateNav()
         {
             VTDGen vg = new VTDGen();
-            if (vg.parseFile("./XmlTestFiles/mix.xml", true))
+            if (vg.parseFile("./XmlDataFiles/mix.xml", true))
             {
                 VTDNav vn = vg.getNav();
                 // duplicated VTDNav instances share the same XML, LC buffers and VTD buffers.

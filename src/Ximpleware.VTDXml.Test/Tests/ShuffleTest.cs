@@ -1,4 +1,3 @@
-using System;
 using System.IO;
 using System.Text;
 using com.ximpleware;
@@ -19,13 +18,13 @@ namespace Ximpleware.VTDXml
             ap1.selectXPath("/root/b");
             ap2.selectXPath("/root/c");
             Encoding eg = System.Text.Encoding.GetEncoding("utf-8");
-            if (vg.parseFile("./XmlTestFiles/old.xml", false))
+            if (vg.parseFile("./XmlDataFiles/old.xml", false))
             {
                 VTDNav vn = vg.getNav();
                 ap0.bind(vn);
                 ap1.bind(vn);
                 ap2.bind(vn);
-                FileStream fos = new FileStream("./XmlTestFiles/new.xml", System.IO.FileMode.OpenOrCreate);
+                FileStream fos = new FileStream("./XmlDataFiles/new.xml", System.IO.FileMode.OpenOrCreate);
                 //fos.Write("<root>".getBytes());
                 byte[] ba0, ba1, ba2, ba3, ba4;
                 //ba0 = eg.GetBytes("

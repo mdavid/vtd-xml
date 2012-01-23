@@ -32,98 +32,98 @@ using NUnit.Framework;
 
 namespace Ximpleware.VTDXml
 {
-		partial class Test
-		{
-				[Test]
-				public static void SOAPProcessor()
-				{
-						try
-						{
-								int t;
-								System.IO.FileInfo f = new System.IO.FileInfo("./XmlTestFiles/soap.xml");
-								System.IO.FileStream fis =
-														new System.IO.FileStream(f.FullName, System.IO.FileMode.Open, System.IO.FileAccess.Read);
-								System.IO.FileInfo f1 = new System.IO.FileInfo("./XmlTestFiles/out.xml");
-								System.IO.FileStream fos = new System.IO.FileStream(f1.FullName, System.IO.FileMode.Create);
-								byte[] b = new byte[(int)f.Length];
-								fis.Read(b, 0, (int)f.Length);
-								AutoPilot ap = new AutoPilot();
-								ap.declareXPathNameSpace("ns1", "http://www.w3.org/2003/05/soap-envelope");
-								// get to the SOAP header
-								ap.selectXPath("/ns1:Envelope/ns1:Header/*[@ns1:mustUnderstand]");
-								Console.WriteLine("expr string is " + ap.getExprString());
-								// instantiate the parser
-								VTDGen vg = new VTDGen();
-								int j = 0;
-								VTDNav vn = null;
-								while (j < 10)
-								{
-										vg.setDoc_BR(b); // use setDoc_BR (instead of setDoc) to turn on buffer reuse
-										vg.parse(true);  // set namespace awareness to true 
-										vn = vg.getNav();
-										ap.bind(vn); // bind calls resetXPath() so
+    partial class Test
+    {
+        [Test]
+        public static void SOAPProcessor()
+        {
+            try
+            {
+                int t;
+                System.IO.FileInfo f = new System.IO.FileInfo("./XmlDataFiles/soap.xml");
+                System.IO.FileStream fis =
+                            new System.IO.FileStream(f.FullName, System.IO.FileMode.Open, System.IO.FileAccess.Read);
+                System.IO.FileInfo f1 = new System.IO.FileInfo("./XmlDataFiles/out.xml");
+                System.IO.FileStream fos = new System.IO.FileStream(f1.FullName, System.IO.FileMode.Create);
+                byte[] b = new byte[(int)f.Length];
+                fis.Read(b, 0, (int)f.Length);
+                AutoPilot ap = new AutoPilot();
+                ap.declareXPathNameSpace("ns1", "http://www.w3.org/2003/05/soap-envelope");
+                // get to the SOAP header
+                ap.selectXPath("/ns1:Envelope/ns1:Header/*[@ns1:mustUnderstand]");
+                Console.WriteLine("expr string is " + ap.getExprString());
+                // instantiate the parser
+                VTDGen vg = new VTDGen();
+                int j = 0;
+                VTDNav vn = null;
+                while (j < 10)
+                {
+                    vg.setDoc_BR(b); // use setDoc_BR (instead of setDoc) to turn on buffer reuse
+                    vg.parse(true);  // set namespace awareness to true 
+                    vn = vg.getNav();
+                    ap.bind(vn); // bind calls resetXPath() so
 
-										while ((t = ap.evalXPath()) != -1)
-										{
+                    while ((t = ap.evalXPath()) != -1)
+                    {
 
-												Console.WriteLine("j t--> " + j + " " + t);
-												long l = vn.getElementFragment();
-												int len = (int)(l >> 32);
-												int offset = (int)l;
-												fos.Write(b, offset, len); //write the fragment out into out.txt
-												System.Text.Encoding encoder = System.Text.Encoding.GetEncoding("ASCII");
-												byte[] bytes = encoder.GetBytes("\n=========\n");
+                        Console.WriteLine("j t--> " + j + " " + t);
+                        long l = vn.getElementFragment();
+                        int len = (int)(l >> 32);
+                        int offset = (int)l;
+                        fos.Write(b, offset, len); //write the fragment out into out.txt
+                        System.Text.Encoding encoder = System.Text.Encoding.GetEncoding("ASCII");
+                        byte[] bytes = encoder.GetBytes("\n=========\n");
 
-												fos.Write(bytes, 0, bytes.Length);
-										}
-										ap.resetXPath();
-										j++;
-								}
-								j = 0;
-								Console.WriteLine("j -->" + j);
-								vg.setDoc_BR(b); // use setDoc_BR (instead of setDoc) to turn on buffer reuse
-								vg.parse(true);  // set namespace awareness to true 
-								vn = vg.getNav();
-								ap.bind(vn); // bind calls resetXPath() so
-								t = -1;
-								while (j < 10)
-								{
-										while ((t = ap.evalXPath()) != -1)
-										{
-												Console.WriteLine("j t --> " + j + " " + t);
-												long l = vn.getElementFragment();
-												int len = (int)(l >> 32);
-												int offset = (int)l;
-												fos.Write(b, offset, len); //write the fragment out into out.txt
-												System.Text.Encoding encoder = System.Text.Encoding.GetEncoding("ASCII");
-												byte[] bytes = encoder.GetBytes("\n=========\n");
+                        fos.Write(bytes, 0, bytes.Length);
+                    }
+                    ap.resetXPath();
+                    j++;
+                }
+                j = 0;
+                Console.WriteLine("j -->" + j);
+                vg.setDoc_BR(b); // use setDoc_BR (instead of setDoc) to turn on buffer reuse
+                vg.parse(true);  // set namespace awareness to true 
+                vn = vg.getNav();
+                ap.bind(vn); // bind calls resetXPath() so
+                t = -1;
+                while (j < 10)
+                {
+                    while ((t = ap.evalXPath()) != -1)
+                    {
+                        Console.WriteLine("j t --> " + j + " " + t);
+                        long l = vn.getElementFragment();
+                        int len = (int)(l >> 32);
+                        int offset = (int)l;
+                        fos.Write(b, offset, len); //write the fragment out into out.txt
+                        System.Text.Encoding encoder = System.Text.Encoding.GetEncoding("ASCII");
+                        byte[] bytes = encoder.GetBytes("\n=========\n");
 
-												fos.Write(bytes, 0, bytes.Length);
-										}
-										ap.resetXPath();
-										j++;
-								}
+                        fos.Write(bytes, 0, bytes.Length);
+                    }
+                    ap.resetXPath();
+                    j++;
+                }
 
-								fis.Close();
-								fos.Close();
-						}
-						catch (ParseException e)
-						{
-						}
-						catch (NavException e)
-						{
-						}
-						catch (XPathParseException e)
-						{
-						}
-						catch (XPathEvalException e)
-						{
-						}
-						catch (System.IO.IOException e)
-						{
+                fis.Close();
+                fos.Close();
+            }
+            catch (ParseException e)
+            {
+            }
+            catch (NavException e)
+            {
+            }
+            catch (XPathParseException e)
+            {
+            }
+            catch (XPathEvalException e)
+            {
+            }
+            catch (System.IO.IOException e)
+            {
 
-						}
-				}
-		}
+            }
+        }
+    }
 }
 

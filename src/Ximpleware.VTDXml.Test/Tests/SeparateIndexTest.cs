@@ -26,25 +26,25 @@ using NUnit.Framework;
 
 namespace Ximpleware.VTDXml
 {
-		partial class Test
-		{
-				[Test]
-				public static void SeparateIndex()
-				{
-						VTDGen vg = new VTDGen();
-						if (vg.parseFile("./XmlTestFiles/mix.xml", true))
-						{
-								vg.writeSeparateIndex("./XmlTestFiles/mix.vtd");
-						}
-						VTDNav vn = vg.loadSeparateIndex("./XmlTestFiles/mix.xml", "./XmlTestFiles/mix.vtd");
-						AutoPilot ap = new AutoPilot(vn);
-						ap.selectXPath("//*");
-						int i;
-						while ((i = ap.evalXPath()) != -1)
-						{
-								Console.WriteLine("element name: " + vn.toString(i));
-						}
-				}
+    partial class Test
+    {
+        [Test]
+        public static void SeparateIndex()
+        {
+            VTDGen vg = new VTDGen();
+            if (vg.parseFile("./XmlDataFiles/mix.xml", true))
+            {
+                vg.writeSeparateIndex("./XmlDataFiles/mix.vtd");
+            }
+            VTDNav vn = vg.loadSeparateIndex("./XmlDataFiles/mix.xml", "./XmlDataFiles/mix.vtd");
+            AutoPilot ap = new AutoPilot(vn);
+            ap.selectXPath("//*");
+            int i;
+            while ((i = ap.evalXPath()) != -1)
+            {
+                Console.WriteLine("element name: " + vn.toString(i));
+            }
+        }
 
-		}
+    }
 }

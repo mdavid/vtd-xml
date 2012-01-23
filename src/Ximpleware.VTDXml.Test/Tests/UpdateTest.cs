@@ -26,51 +26,51 @@ using NUnit.Framework;
  */
 namespace Ximpleware.VTDXml
 {
-		partial class Test
-		{
-				[Test]
-				public static void Update()
-				{
-						try
-						{
-								// open a file and read the content into a byte array
-								VTDGen vg = new VTDGen();
-								if (vg.parseFile("./XmlTestFiles/oldpo.xml", true))
-								{
-										VTDNav vn = vg.getNav();
-										System.IO.FileInfo f1 = new System.IO.FileInfo("./XmlTestFiles/newpo.txt");
-										System.IO.FileStream fos = new System.IO.FileStream(f1.FullName, System.IO.FileMode.Create);
+    partial class Test
+    {
+        [Test]
+        public static void Update()
+        {
+            try
+            {
+                // open a file and read the content into a byte array
+                VTDGen vg = new VTDGen();
+                if (vg.parseFile("./XmlDataFiles/oldpo.xml", true))
+                {
+                    VTDNav vn = vg.getNav();
+                    System.IO.FileInfo f1 = new System.IO.FileInfo("./XmlDataFiles/newpo.txt");
+                    System.IO.FileStream fos = new System.IO.FileStream(f1.FullName, System.IO.FileMode.Create);
 
-										AutoPilot ap = new AutoPilot(vn);
-										XMLModifier xm = new XMLModifier(vn);
-										ap.selectXPath("/purchaseOrder/items/item[@partNum='872-AA']");
-										int i = -1;
-										while ((i = ap.evalXPath()) != -1)
-										{
-												xm.remove();
-												xm.insertBeforeElement("<something/>\n");
-										}
-										ap.selectXPath("/purchaseOrder/items/item/USPrice[.<40]/text()");
-										while ((i = ap.evalXPath()) != -1)
-										{
-												xm.updateToken(i, "200");
-										}
-										xm.output(fos);
-										fos.Close();
-								}
-						}
-						catch (NavException e)
-						{
-								Console.WriteLine(" Exception during navigation " + e);
-						}
-						catch (ModifyException e)
-						{
-								Console.WriteLine(" Modify exception occurred " + e);
-						}
-						catch (System.IO.IOException e)
-						{
-								System.Console.Out.WriteLine(" IO exception condition" + e);
-						}
-				}
-		}
+                    AutoPilot ap = new AutoPilot(vn);
+                    XMLModifier xm = new XMLModifier(vn);
+                    ap.selectXPath("/purchaseOrder/items/item[@partNum='872-AA']");
+                    int i = -1;
+                    while ((i = ap.evalXPath()) != -1)
+                    {
+                        xm.remove();
+                        xm.insertBeforeElement("<something/>\n");
+                    }
+                    ap.selectXPath("/purchaseOrder/items/item/USPrice[.<40]/text()");
+                    while ((i = ap.evalXPath()) != -1)
+                    {
+                        xm.updateToken(i, "200");
+                    }
+                    xm.output(fos);
+                    fos.Close();
+                }
+            }
+            catch (NavException e)
+            {
+                Console.WriteLine(" Exception during navigation " + e);
+            }
+            catch (ModifyException e)
+            {
+                Console.WriteLine(" Modify exception occurred " + e);
+            }
+            catch (System.IO.IOException e)
+            {
+                System.Console.Out.WriteLine(" IO exception condition" + e);
+            }
+        }
+    }
 }
