@@ -59,34 +59,34 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <None Include="XmlTestFiles\bioinfo.xml">
+    <None Include="XmlDataFiles\bioinfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="XmlTestFiles\cd.xml">
+    <None Include="XmlDataFiles\cd.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="XmlTestFiles\soap.xml">
+    <None Include="XmlDataFiles\soap.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="XmlTestFiles\servers.xml">
+    <None Include="XmlDataFiles\servers.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="XmlTestFiles\newpo.xml">
+    <None Include="XmlDataFiles\newpo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="XmlTestFiles\oldpo.xml">
+    <None Include="XmlDataFiles\oldpo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="XmlTestFiles\new.xml">
+    <None Include="XmlDataFiles\new.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="XmlTestFiles\old.xml">
+    <None Include="XmlDataFiles\old.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="XmlTestFiles\mix.xml">
+    <None Include="XmlDataFiles\mix.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="XmlTestFiles\po.xml">
+    <None Include="XmlDataFiles\po.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
